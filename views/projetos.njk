@@ -1,0 +1,47 @@
+{% extends "layout.njk" %}
+
+    {% block head %}
+        <title>Vídeos - Jon Wayne</title>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    {% endblock %}
+
+    
+{% block content %}
+
+    <div id="wrapper">
+        <h1>Vídeos</h1>
+    </div><!--wrapper-->
+
+    <section class="cards">
+        
+        {% for item in items %}
+            <div class="card">
+                <div class="card__image__container" id="{{item.id}}">
+                    <img src="{{item.image}}" alt="Imagem de {{item.title}}">
+                </div><!--card__image__container-->
+                <div class="card__content">
+                    <p>{{item.title}}</p>
+                </div><!--card__content-->
+                <div class="card__info">
+                    <p>{{item.duration}}</p>
+                    <a href="{{item.url_repo}}" target="_blank" class="card__price">{{item.price}}</a>
+                </div><!--card__info-->
+            </div><!--card-->        
+        {% endfor %}
+    </section><!--cards-->
+
+    <div class="modal-overlay">
+        <div class="modal">
+            <a class="close-modal">
+                <i class="material-icons">close</i>
+            </a>
+
+            <div class="modal-content">
+                <iframe src="" frameborder="0"></iframe>
+            </div><!--modal-content-->
+        </div><!--modal-->
+    </div><!--modal-overlay-->
+    
+    <script src="/js/script.js"></script>
+
+{% endblock %}
