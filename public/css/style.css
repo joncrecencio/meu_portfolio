@@ -112,6 +112,8 @@ header{
     grid-template-columns: 1fr 1fr 1fr; /*divide em fraçoes e colunas*/
     gap: 20px; /* dar espaço entre os elementos do grid*/
     padding-bottom: 30px;
+    padding-left: 2%;
+    padding-right: 2%;
 }
 
 .card{
